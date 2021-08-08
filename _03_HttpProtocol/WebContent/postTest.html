@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>post 요청</title>
+</head>
+<body>
+	<h3>post 요청1 : 로그인 폼</h3>
+	<p>로그인 폼은 입력값 노출을 방지하기 위해 post를 사용해야 한다</p>
+	<form action="LoginServlet" method="post">
+		아이디 : <input type="text" name="id"><br/>
+		암호 : <input type="password" name="password"><br/>
+		<input type="submit" value="로그인">
+	</form>
+	
+	<h3>post 요청2 : 계산기</h3>
+	<p>URL에 값이 포함되지 않고 본문에 숨겨서 간다</p>
+	<form action="CalculatorServlet" method="post">
+		<input type="text" name="v1" style="width:50px;">
+		<select name="op">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<input type="text" name="v2" style="width:50px;">
+		<input type="submit" value="=">		
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
