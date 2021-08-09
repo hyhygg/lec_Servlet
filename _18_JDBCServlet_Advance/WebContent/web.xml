@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>_18_JDBCServlet_Advance</display-name>
+  
+  <!-- web.xml은 서비스중에도 수정 가능하다
+  	   서블릿 객체의 주소를 변경해야 할 상황에도
+  	  이 파일의 주소만 변경하면 된다.
+  	  그리고 새로운 클래스가 기존의 클래스를 대체할 상황에도
+  	  이 파일만 수정하면 된다.
+  	  이 파일은 tomcat서버에 노출되어 있다.
+   -->
+  
+  <!-- 서블릿 객체 선언 -->
+  <servlet>
+  	<servlet-name>Calculator</servlet-name>
+  	<servlet-class>lesson03.servlets.CalculatorServlet</servlet-class>
+  </servlet>
+  
+  <!-- 주소매핑 -->
+  <servlet-mapping>
+  	<servlet-name>Calculator</servlet-name>
+  	<url-pattern>/calc</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
