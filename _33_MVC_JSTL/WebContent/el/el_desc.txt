@@ -1,0 +1,31 @@
+1) EL(Expression Language)
+  ; 서블릿에서 공유공간에 저장한 객체를
+   쉽게 꺼내기 위한 간단한 표현식
+  
+2) ${member.email}
+  ; jsp에서 위처럼 썼을 때 동작 방식
+  member객체를 다음 순서대로 찾는다
+  jspContext -> ServletRequest 
+  -> HttpSession -> ServletContext -> null
+  
+  member.email에서 email을 프로퍼티라고 한다
+  프로퍼티는 setter/getter 에서 get/set을 제외한
+  시작 단어를 소문자로 표현한것.
+  결국 member.getEmail()를 호출하는 것
+  
+3) 검색범위
+    EL 사용명		java 객체
+	pageScope : jspContext
+	requestScope : ServletRequest
+	sessionScope : HttpSession
+	applicationScope : ServletContext
+	
+4) 만약 member객체가  requestScopt와 sessionScope에
+   둘다 있을 경우 sessionScope에 있는 member를 사용하고 싶다면?
+   ${sessionScope.member.email}
+   
+   
+
+
+
+
